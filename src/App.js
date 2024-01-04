@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
+import './assets/Employees.css'
+import Banner from "./components/Banner";
+import Employes from "./components/Employes";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [employees, setEmployees] = useState([]);
+  const [isReady, setisReady] = useState(false);
+
+
+  React.useEffect(()=> {
+    fetch('https://dummy.restapiexample.com/api/v1/employees').then(result => result.json())
+    .then(jsonResult => {
+      console.log(jsonResult);
+      // recuperation de l'objet data
+      setEmployees(jsonResult.data)
+
+      setisReady(true);
+    })
+    .catch(e => console.error(e))
+  },[]);
+  if (isReady) {
+
+    return (
+      <div className="App">
+
+          <Banner></Banner>
+          <Employes name={employees}></Employes>
+      </div>
+    );
+  }else{
+    return <div>Chargement en cours ...</div>;
+  }
+  
 }
 
 export default App;
