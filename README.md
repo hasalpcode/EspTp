@@ -13,3 +13,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 result demo
 
 ![resultMeteo.png](./resultMeteo.png)
+<p align="center">
+  <img src="./resultMeteo.png" width="350" title="hover text">
+</p>
