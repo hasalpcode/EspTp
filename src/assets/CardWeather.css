@@ -1,0 +1,38 @@
+body {
+    color: #fff;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #CFD8DC;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+.App{
+    margin: auto;
+}
+.card {
+    /* background-image: url("https://i.imgur.com/dpqZJV5.jpg"); */
+    background-size: contain;
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 4px #9E9E9E;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin: auto;
+}
+
+.time-font {
+    font-size: 50px;
+}
+
+.sm-font {
+    font-size: 18px;
+}
+
+.med-font {
+    font-size: 15px;
+}
+
+.large-font {
+    font-size: 60px;
+}
