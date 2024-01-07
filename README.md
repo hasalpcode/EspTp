@@ -12,4 +12,4 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 result demo
 
-![resultMeteo.png](C:\Users\22177\resultMeteo.png)
+![resultMeteo.png](src/resultMeteo.png)
